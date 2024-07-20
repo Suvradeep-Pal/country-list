@@ -3,11 +3,13 @@ import "./Countries.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const data = [];
 const url = "https://restcountries.com/v3.1/all?fields=name,flags";
 
 export default function Countries() {
+  const navigate = useNavigate();
   const [countries, setCountries] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [errorText, setErrorText] = useState();
@@ -60,7 +62,10 @@ export default function Countries() {
               const { flags, name } = country;
 
               return (
-                <article key={name.common}>
+                <article
+                  key={name.common}
+                  onClick={() => handleClick(name.common)}
+                >
                   <div>
                     <img className="flag" src={flags.png} alt={flags.alt}></img>
                     <h3>{name.common}</h3>
@@ -76,4 +81,7 @@ export default function Countries() {
       </main>
     </div>
   );
+  function handleClick(CountryName) {
+    navigate("/countrydetails?target=" + CountryName);
+  }
 }

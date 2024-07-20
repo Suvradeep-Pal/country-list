@@ -49,9 +49,20 @@ header {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 50px;
-  row-gap: 50px;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  article {
+    border: 1px solid rgb(169, 169, 182);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  article:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3);
+  }
 }
+
 img {
   border-radius: 5px;
 }
