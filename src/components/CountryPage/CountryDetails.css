@@ -1,0 +1,20 @@
+.background {
+  background-color: rgba(36, 36, 36);
+  color: whitesmoke;
+  width: 100%;
+}
+
+.position {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 143px;
+}
+
+.imagesize {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  margin: 130px 500px 10px 570px;
+  justify-content: center;
+}

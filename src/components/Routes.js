@@ -9,7 +9,7 @@ function CountryRouter() {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/countries" element={<Countries />} />
-      <Route path="/countrydetails" element={<CountryDetails />} />
+      <Route path="/countrydetails/:name" element={<CountryDetails />} />
     </Routes>
   );
 }

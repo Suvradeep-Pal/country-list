@@ -82,6 +82,6 @@ export default function Countries() {
     </div>
   );
   function handleClick(CountryName) {
-    navigate("/countrydetails?target=" + CountryName);
+    navigate("/countrydetails/" + CountryName);
   }
 }
